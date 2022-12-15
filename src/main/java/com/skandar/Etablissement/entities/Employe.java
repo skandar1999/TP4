@@ -23,7 +23,6 @@ public class Employe {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nom;
-	private String prenom;
 	
 	@OneToMany(mappedBy = "employe")
 	@JsonIgnore
@@ -48,12 +47,8 @@ public class Employe {
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-	public String getPrenom() {
-		return prenom;
-	}
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
-	}
+	
+	
 	public List<Etablissement> getEtablissement() {
 		return Etablissements;
 	}
